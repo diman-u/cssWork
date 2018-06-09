@@ -1,0 +1,97 @@
+//colors
+$color_suva_gray_approx: #888888;
+$color_chathams_blue_approx: #185572;
+$color_web_orange_approx: #fda400;
+$color_pampas_approx: #f4f1ec;
+
+//urls
+$url_0: url(/local/templates/forDev/images/list.png);
+$url_1: url(/local/templates/forDev/images/listY.png);
+$url_2: url(/local/templates/forDev/images/btnStr.png);
+
+.work {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+  .subWork {
+    flex-basis: 50%;
+    &:first-child {
+      margin-right: 2%;
+    }
+    .Img {
+    }
+    img {
+      max-width: 100%;
+    }
+    ._title {
+      border-bottom: 3px solid $color_suva_gray_approx;
+      font-size: 24px;
+      color: $color_chathams_blue_approx;
+      margin: 20px 0;
+      padding: 5px 0;
+      text-transform: uppercase;
+      font-weight: bold;
+      .textSm{
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 25px;
+      }
+    }
+    ._list {
+      ul {
+      }
+      li {
+        &.service {
+          list-style-image: $url_0;
+          font-size: 18px;
+          color: $color_chathams_blue_approx;
+          margin: 10px 0;
+          list-style-type: square;
+          padding: 0;
+        }
+        &:hover {
+          color: $color_web_orange_approx;
+          list-style-image: $url_1;
+        }
+        &:after {
+          content: " >";
+          text-align: right;
+          margin-left: 10px;
+          font-weight: bold;
+        }
+      }
+      a {
+        color: $color_chathams_blue_approx;
+        text-decoration: none;
+        &:hover {
+        }
+      }
+      .btn {
+        border: 2px solid $color_suva_gray_approx;
+        font-size: 16px;
+        background-color: $color_pampas_approx;
+        padding: 5px 25px;
+        color: $color_suva_gray_approx;
+        cursor: pointer;
+        margin-left: 22px;
+        margin-top: 10px;
+        background-repeat: no-repeat;
+        background-position: 90%;
+        &:after {
+          content: " >";
+          text-align: right;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .work {
+    display: flex;
+    flex-direction: column;
+    .subWork {
+      flex-basis: 100%;
+    }
+  }
+}
